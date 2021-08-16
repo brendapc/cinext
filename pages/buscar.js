@@ -7,6 +7,7 @@ export default function Home({list}) {
   const [searchText, setSearchText] = useState('')
   const [movieList, setMovieList] = useState([])
 
+  //client side render
   const handleSearch = async () =>{
     if(searchText !== ''){
       const result = await fetch(`http://localhost:3000/api/search?value=${searchText}`)
